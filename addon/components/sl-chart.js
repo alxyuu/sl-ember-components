@@ -178,7 +178,8 @@ export default Ember.Component.extend({
         'options',
         function() {
             const chartDiv = this.$( 'div.chart' );
-            this.set( 'chart', chartDiv.highcharts( this.highchartsOptions() ) );
+            chartDiv.highcharts( this.highchartsOptions() )
+            this.set( 'chart', chartDiv.highcharts() );
         }
     ),
 
